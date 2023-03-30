@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 2.7.0"
 
   spec.add_dependency "css_parser"
+  spec.add_dependency "concurrent-ruby"
   spec.add_dependency "activemodel"
   spec.add_dependency "zeitwerk", "~> 2.5"
   spec.add_dependency "railties", ">= 5.0"

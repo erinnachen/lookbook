@@ -1,0 +1,54 @@
+@layer components {
+  [data-component="nook-icon"] {
+    @apply inline-flex flex-none w-6 h-6 text-current;
+
+    svg {
+      @apply w-full h-full;
+
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Styles */
+
+    &:not([data-style="fill"]) svg {
+      @apply fill-none stroke-2 stroke-current;
+    }
+
+    &[data-style="fill"] svg {
+      @apply fill-current;
+    }
+
+    /* Sizes */
+
+    &[data-size="xxs"] {
+      @apply w-3 h-3;
+    }
+
+    &[data-size="xs"] {
+      @apply w-4 h-4;
+    }
+
+    &[data-size="sm"] {
+      @apply w-5 h-5;
+    }
+
+    &[data-size="md"] {
+      @apply w-6 h-6;
+    }
+
+    &[data-size="lg"] {
+      @apply w-7 h-7;
+    }
+
+    &[data-size="xl"] {
+      @apply w-8 h-8;
+    }
+
+    /* Motion */
+
+    &[data-spin="true"] svg {
+      @apply animate-spin;
+    }
+  }
+}

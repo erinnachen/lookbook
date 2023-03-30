@@ -1,0 +1,7 @@
+@layer components {
+  [data-component="nook-app"] {
+    .tabgroup-tabs {
+      @apply flex items-center space-x-2;
+    }
+  }
+}

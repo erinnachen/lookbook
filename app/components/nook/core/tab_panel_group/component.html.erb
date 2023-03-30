@@ -1,0 +1,5 @@
+<%= render component_tag(x: {data: "nookTabPanelGroup(#{name.to_json})"}) do %>
+  <% panels.each do |panel| %>
+    <%= panel %>
+  <% end %>
+<% end %>

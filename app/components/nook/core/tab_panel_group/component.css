@@ -1,0 +1,6 @@
+@layer components {
+  [data-component="nook-tab-panel-group"] {
+    [data-component="nook-tab-panel"] {
+    }
+  }
+}

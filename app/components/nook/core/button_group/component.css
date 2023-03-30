@@ -1,0 +1,5 @@
+@layer components {
+  [data-component="nook-button-group"] {
+    @apply flex items-center space-x-2;
+  }
+}

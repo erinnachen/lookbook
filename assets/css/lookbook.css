@@ -6,6 +6,7 @@
 @import "./tooltip.css";
 
 @import-glob "../../app/components/lookbook/**/*/component.css";
+@import-glob "../../app/components/nook/**/*/component.css";
 
 @layer base {
   html {

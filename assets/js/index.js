@@ -21,7 +21,13 @@ import app from "./app";
 import { getComponents } from "./helpers/build";
 import * as components from "../../app/components/lookbook/*/*component.js";
 import * as subComponents from "../../app/components/lookbook/*/*/component.js";
+
 import * as jsComponents from "./components/*.js";
+
+// Nook components
+import * as nookCore from "../../app/components/nook/core/*/component.js";
+import * as nookApp from "../../app/components/nook/app/*/component.js";
+import * as nookLayouts from "../../app/components/nook/layouts/*/component.js";
 
 // Plugins
 
@@ -51,6 +57,13 @@ Alpine.data("app", app);
   const components = getComponents(scripts);
   Object.keys(components).forEach((name) => {
     Alpine.data(`${name}Component`, components[name]);
+  });
+});
+
+[nookCore, nookApp, nookLayouts].forEach((scripts) => {
+  const components = getComponents(scripts);
+  Object.keys(components).forEach((name) => {
+    Alpine.data(components[name].name, components[name]);
   });
 });
 

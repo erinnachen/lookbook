@@ -1,0 +1,10 @@
+<%= render component_tag(x: {data: "nookButton"}, aria: {label: label}) do %>
+  <span class="button-inner">
+    <%= icon %>
+    <% if content? %>
+      <span class="button-label">
+        <%= content %>
+      </span>
+    <% end %>
+  </span>
+<% end %>

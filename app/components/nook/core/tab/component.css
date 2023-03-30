@@ -1,0 +1,15 @@
+@layer components {
+  [data-component="nook-tab"] {
+    @apply px-2 py-2 border-b-2 border-transparent;
+
+    &.tab-active {
+      @apply border-emerald-600;
+    }
+
+    /* Disabled */
+
+    &[disabled] {
+      @apply opacity-70;
+    }
+  }
+}

@@ -1,14 +1,19 @@
 require "zeitwerk"
 require "lookbook/version"
+require "nook"
 
 loader = Zeitwerk::Loader.for_gem
 loader.ignore("#{__dir__}/lookbook.rb")
+loader.ignore("#{__dir__}/nook.rb")
 loader.push_dir("#{__dir__}/lookbook", namespace: Lookbook)
 loader.collapse("#{__dir__}/lookbook/*")
 loader.collapse("#{__dir__}/lookbook/*/*")
 loader.collapse("#{__dir__}/lookbook/*/*/*")
 loader.ignore("#{__dir__}/lookbook/support/evented_file_update_checker.rb")
 loader.ignore("#{__dir__}/lookbook/cable")
+
+loader.push_dir("#{__dir__}/nook", namespace: Nook)
+
 loader.setup
 
 # The Lookbook application entry point.

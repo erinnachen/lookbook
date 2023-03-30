@@ -1,0 +1,6 @@
+@layer components {
+  [data-component="nook-pane-group"] {
+    [data-component="nook-pane"] {
+    }
+  }
+}

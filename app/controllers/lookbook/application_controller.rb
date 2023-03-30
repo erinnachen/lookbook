@@ -1,14 +1,17 @@
 module Lookbook
   class ApplicationController < ActionController::Base
+    prepend_view_path Engine.root.join("app/components/lookbook")
+    prepend_view_path Engine.root.join("app/components/nook")
     content_security_policy(false) if respond_to?(:content_security_policy)
 
     protect_from_forgery with: :exception
 
-    layout "lookbook/application"
+    layout "nook/application"
 
     helper Lookbook::ClassNamesHelper if Engine.runtime_context.rails_older_than?("6.1.0")
     helper Lookbook::ApplicationHelper
     helper Lookbook::UiElementsHelper
+    helper Nook::ComponentHelper
 
     before_action :assign_theme_overrides
     before_action :assign_instance_vars
@@ -47,6 +50,7 @@ module Lookbook
       @theme = Engine.theme
       @config = Lookbook.config
       @engine = Lookbook.engine
+      @app = Lookbook
       @embed = !!params[:lookbook_embed]
       @blank_slate = Engine.pages.none? && Engine.previews.none?
     end

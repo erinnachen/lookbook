@@ -1,0 +1,9 @@
+<%= render component_tag(:header, x: {data: "nookAppHeader"}) do %>
+  <%= nook_toolbar do |toolbar| %>
+    <% toolbar.with_section do %>
+      <a href="<%#= home_path %>">
+        <%#= config.project_name %>
+      </a>
+    <% end %>
+  <% end %>
+<% end %>
